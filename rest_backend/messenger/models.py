@@ -12,8 +12,8 @@ from rest_framework.authtoken.models import Token
 class ChatView(models.Model):
     sender = models.ForeignKey(User, on_delete=models.CASCADE, default=None, related_name='sender')
     receiver = models.ForeignKey(User, on_delete=models.CASCADE, default=None, related_name='receiver')
-    send_date = models.DateTimeField('date published')
-    textconetnt = models.TextField(default='Hello word')
+    send_date = models.DateTimeField(auto_now_add=True)
+    textcontent = models.TextField()
 
     def __str__():
         return str(self.id)

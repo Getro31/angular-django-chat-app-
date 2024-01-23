@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.scss']
+selector: 'index-component',
+templateUrl: './index.component.html',
+styleUrls: ['./index.component.scss']
 })
-export class IndexComponent {
+export class IndexComponent implements OnInit {
 
+    constructor() {
+    }
+
+    ngOnInit(){
+
+    }
+
+    signup() {
+        window.alert('The user has been signed up!');
+    }
 }

@@ -15,4 +15,4 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class ChatViewSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = ChatView
-		fields = ['id','sender','receiver','sent_date', 'textcontent']
+		fields = ['id','sender','receiver','send_date', 'textcontent']
